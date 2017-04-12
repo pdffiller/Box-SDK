@@ -1,6 +1,6 @@
 {
-    "name": "nikitash/boxphpapi",
-    "type": "API",
+    "name": "pdffiller/boxphpapi",
+    "type": "library",
     "description": "Unofficial BoxPHPAPI v2",
     "keywords": ["Box","BoxAPI","PHP","API"],
     "authors": [
