@@ -126,7 +126,7 @@ class Apibox {
 	}
 
 	public function create_folder($name, $parent_id, $access_token) {
-		$url = @$this->build_url("/folders", array('access_token' => $access_token));
+		$url = $this->build_url("/folders", array('access_token' => $access_token));
 		$params = array('name' => $name, 'parent' => array('id' => $parent_id));
 
 		$result = json_decode($this->post($url, json_encode($params)), true);
@@ -280,7 +280,7 @@ class Apibox {
 	}
 
 	/* Builds the URL for the call */
-	public function build_url($api_func, array $opts = array(), $url) {
+	public function build_url($api_func, array $opts = array(), $url = null) {
 		$opts = $this->set_opts($opts);
 		if(isset($url)){
 			$base = $url . $api_func . '?';
